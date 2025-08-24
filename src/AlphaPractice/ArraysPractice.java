@@ -187,8 +187,10 @@ public class ArraysPractice {
 			rightBound[i] = Math.max(height[i], rightBound[i+1]);
 		}
 		int tW = 0;
+		int wL = 0;
 		for(int i = 0; i < n;i++) {
-			tW += ((Math.min(leftBound[i], rightBound[i])) - height[i]) * width;
+			wL = (Math.min(leftBound[i], rightBound[i])); // calculate each bar's water Level
+			tW += ((wL) - height[i]) * width; // calculate trapped water
 		}
 		System.out.println("Trapped Rainwater is: "+ tW);
 	}
@@ -233,19 +235,21 @@ public class ArraysPractice {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	void buySellStocks(int prices[]) {
+		int n = prices.length;
+		
+		int buyPrice = prices[0]; // initial day buying price, u can't sell the stock at same day, start selling from next day
+		int profit = Integer.MIN_VALUE;
+		int sellPrice = 0;
+		
+		for(int i = 1; i<n;i++) {
+			sellPrice = prices[i]; // today's selling price
+			profit = Math.max(sellPrice-buyPrice, profit); // max profit so far
+			buyPrice = Math.min(i, buyPrice);  // minimum buying Price so far
+		}
+		
+		System.out.println("Maximum profit: "+profit+" Buying Price: "+ buyPrice);
+	}
 	
 	
 }

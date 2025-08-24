@@ -4,9 +4,13 @@ public class solutions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArraysPractice arrOp = new ArraysPractice();
-		int [] a = {5, 6, 7, 0, 1, 2, 4};
-		arrOp.ModifiedBinarySearch(a, 7);
+		TwoDArrays twod = new TwoDArrays();
+		int [][] arr = {{1,2,3,4},
+						{5,6,7,8},
+						{9,10,11,12},
+						{13,14,15,16}
+						};
+		twod.spiralMatrixPrint(arr);
 	}
 
 }
