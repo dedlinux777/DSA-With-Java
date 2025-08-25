@@ -5,12 +5,12 @@ public class solutions {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TwoDArrays twod = new TwoDArrays();
-		int [][] arr = {{1,2,3,4},
-						{5,6,7,8},
-						{9,10,11,12},
-						{13,14,15,16}
+		int [][] arr = {{10,20,30,40},
+						{15,25,35,45},
+						{27,29,37,48},
+						{32,33,39,55}
 						};
-		twod.printDiagonalSum(arr);
+		twod.searchSortedMatrix(arr, 33);
 	}
 
 }

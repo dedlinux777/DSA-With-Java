@@ -64,12 +64,32 @@ public class TwoDArrays {
 		// optimized to n time complexity:
 		sum = 0;
 		for(int i = 0; i<n ; i++) {
-			sum+= arr[i][i];
+			sum+= arr[i][i]; // all primary diagonal values are have the same row and columns
 			if(i != n-1-i)sum+=arr[i][n-1-i]; // because i+j = n-1; j = n-1-i
 		}
 		System.out.println("Using optimised loop: PD+SD sum = "+sum);
 		
 	}
+	
+	
+	void searchSortedMatrix(int arr[][], int key) {
+		int n = arr.length;
+		int i = 0; // row
+		int j = n-1; // column
+		
+		while(i <= n-1 && j >= 0) {
+			if(key == arr[i][j]) {
+				System.out.println("Key found at index: ("+i+","+j+")");
+				return;
+			}else if(key < arr[i][j]) {
+				j--;
+			}else {
+				i++;
+			}
+		}
+		System.out.println("Key Not Found");		
+	}
+	
 	
 	
 	
