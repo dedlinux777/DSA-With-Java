@@ -1,6 +1,6 @@
 package AlphaPractice;
 import java.lang.Math;
-
+import java.util.*;
 
 public class Strings_practice {
 	
@@ -75,8 +75,30 @@ public class Strings_practice {
 		return str.toString();
 	}
 	
+	int countLowerCaseVowels(String s) {
+		int count = 0;
+		for(int i = 0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			if(ch == 'a' | ch == 'e'| ch == 'i' | ch == 'o' | ch == 'u') {
+				count++;
+			}
+		}
+		
+		return count;
+	}
 	
-	
+	boolean isAnagrams(String s1, String s2) {
+		s1.toLowerCase();
+		s2.toLowerCase();
+		
+		char [] strArray1 = s1.toCharArray();
+		char [] strArray2 = s2.toCharArray();
+		
+		Arrays.sort(strArray1);
+		Arrays.sort(strArray2);
+		
+		return Arrays.equals(strArray1, strArray2);
+	}
 	
 	
 	
