@@ -4,10 +4,9 @@ public class solutions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			Strings_practice str = new Strings_practice();
-			String a = "aaaacbbbbbccccd";
-			System.out.println(str.countLowerCaseVowels(a));
+			BitManipulation b = new BitManipulation();
 			
-	}
 
+			System.out.print(b.fastExpo(5, 3));
+	}
 }
